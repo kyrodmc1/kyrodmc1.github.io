@@ -1,130 +1,443 @@
-# Política de Privacidad — FERSHO BOT
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | FERSHO BOT</title>
+    <meta name="description" content="Política de Privacidad de FERSHO BOT para Discord.">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-**Última actualización:** 26 de agosto de 2026
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #0b0d12;
+            color: #e7e9ee;
+            line-height: 1.7;
+        }
 
-Esta Política de Privacidad explica cómo **FERSHO BOT** ("el Bot") recopila, utiliza, almacena y protege determinada información cuando se utiliza en servidores de Discord.
+        header {
+            border-bottom: 1px solid #252936;
+            background: #10131a;
+        }
 
-Al utilizar FERSHO BOT, aceptas las prácticas descritas en esta Política de Privacidad.
+        .header-content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 28px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
 
-## 1. Responsable
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-FERSHO BOT es un bot independiente desarrollado para la plataforma Discord.
+        .logo span {
+            color: #5865f2;
+        }
 
-Para cualquier consulta relacionada con privacidad o tratamiento de datos, puedes contactar mediante:
+        nav a {
+            color: #aeb4c2;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
 
-**Correo electrónico:** [ugzombie16@gmail.com]
+        nav a:hover {
+            color: #ffffff;
+        }
 
-## 2. Información que podemos recopilar
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 70px 24px;
+        }
 
-FERSHO BOT puede procesar determinada información proporcionada por Discord o generada mediante el uso de sus funciones.
+        .hero {
+            margin-bottom: 55px;
+        }
 
-Dependiendo de las funciones habilitadas en un servidor, esto puede incluir:
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(88, 101, 242, 0.12);
+            color: #8d98ff;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
 
-* ID de usuario de Discord.
-* ID del servidor de Discord.
-* ID de canales.
-* ID de roles.
-* Nombre de usuario, nombre para mostrar o apodo de Discord.
-* Información necesaria para ejecutar comandos solicitados por los usuarios.
-* Configuraciones del Bot establecidas por los administradores de un servidor.
-* Información relacionada con el uso de comandos y funciones del Bot.
+        h1 {
+            font-size: clamp(36px, 6vw, 56px);
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 18px;
+        }
 
-FERSHO BOT no necesita recopilar información como contraseñas, información bancaria, números de tarjetas de crédito o mensajes privados de Discord.
+        .updated {
+            color: #858b99;
+            font-size: 14px;
+        }
 
-## 3. Cómo utilizamos la información
+        .content {
+            background: #11141b;
+            border: 1px solid #252936;
+            border-radius: 16px;
+            padding: 42px;
+        }
 
-La información procesada por FERSHO BOT puede utilizarse para:
+        section {
+            margin-bottom: 42px;
+        }
 
-* Ejecutar los comandos solicitados por los usuarios.
-* Proporcionar las funciones del Bot.
-* Guardar y aplicar configuraciones específicas de cada servidor.
-* Mantener y mejorar el funcionamiento del Bot.
-* Detectar errores, abusos o usos indebidos.
-* Mantener la seguridad y estabilidad del servicio.
-* Responder a solicitudes de soporte.
+        section:last-child {
+            margin-bottom: 0;
+        }
 
-La información no se utilizará para vender datos personales a terceros.
+        h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
 
-## 4. Mensajes y contenido de Discord
+        p {
+            color: #b8bdc9;
+            margin-bottom: 14px;
+        }
 
-FERSHO BOT puede necesitar acceder a determinados mensajes o contenido de Discord cuando una función o comando específico lo requiere.
+        ul {
+            padding-left: 24px;
+            color: #b8bdc9;
+        }
 
-El Bot no está diseñado para almacenar permanentemente conversaciones privadas o mensajes personales de los usuarios salvo que una función específica indique claramente lo contrario.
+        li {
+            margin-bottom: 8px;
+        }
 
-Cuando sea técnicamente necesario procesar contenido para ejecutar una función, dicho contenido se utilizará únicamente para proporcionar esa función.
+        strong {
+            color: #ffffff;
+        }
 
-## 5. Almacenamiento de datos
+        .contact {
+            background: #171b25;
+            border-left: 3px solid #5865f2;
+            padding: 18px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
 
-La cantidad y el tipo de información almacenada pueden variar dependiendo de las funciones utilizadas por el servidor.
+        footer {
+            border-top: 1px solid #252936;
+            background: #10131a;
+            padding: 30px 24px;
+            text-align: center;
+            color: #777e8d;
+            font-size: 13px;
+        }
 
-Cuando sea necesario almacenar información, procuraremos conservar únicamente los datos necesarios para proporcionar las funciones correspondientes.
+        footer a {
+            color: #8d98ff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
 
-Los datos podrán eliminarse cuando:
+        @media (max-width: 650px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-* Ya no sean necesarios para proporcionar el servicio.
-* El servidor deje de utilizar FERSHO BOT.
-* El usuario o administrador correspondiente solicite su eliminación, cuando corresponda.
-* Sea necesario eliminarlos por razones de seguridad o mantenimiento.
+            nav a {
+                margin-left: 0;
+                margin-right: 18px;
+            }
 
-## 6. Compartición de información
+            .container {
+                padding: 45px 16px;
+            }
 
-FERSHO BOT no vende ni alquila información personal.
+            .content {
+                padding: 25px 20px;
+            }
 
-La información puede ser procesada por proveedores de infraestructura o servicios tecnológicos utilizados para operar el Bot, únicamente cuando sea necesario para proporcionar, mantener o proteger el servicio.
+            h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
 
-También podremos divulgar información cuando sea necesario para cumplir con obligaciones legales, proteger nuestros derechos o prevenir actividades fraudulentas, abusivas o ilegales.
+<body>
 
-## 7. Discord
+<header>
+    <div class="header-content">
+        <a class="logo" href="/">FERSHO <span>BOT</span></a>
 
-FERSHO BOT funciona dentro de la plataforma Discord.
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/terms.html">Términos</a>
+            <a href="/privacy.html">Privacidad</a>
+        </nav>
+    </div>
+</header>
 
-El uso de Discord está sujeto a los propios términos y políticas de privacidad de Discord. FERSHO BOT no controla las prácticas de privacidad, almacenamiento o procesamiento de datos realizadas directamente por Discord.
+<main class="container">
 
-Puedes consultar las políticas oficiales de Discord en su sitio web.
+    <div class="hero">
+        <div class="badge">FERSHO BOT</div>
+        <h1>Política de Privacidad</h1>
+        <p class="updated">Última actualización: 26 de agosto de 2026</p>
+    </div>
 
-## 8. Seguridad
+    <div class="content">
 
-Tomamos medidas razonables para proteger la información procesada por FERSHO BOT contra acceso no autorizado, pérdida, alteración o divulgación.
+        <section>
+            <p>
+                Esta Política de Privacidad explica cómo <strong>FERSHO BOT</strong>
+                ("el Bot") recopila, utiliza, almacena y protege determinada
+                información cuando se utiliza en servidores de Discord.
+            </p>
 
-Sin embargo, ningún sistema conectado a Internet puede garantizar una seguridad absoluta.
+            <p>
+                Al utilizar FERSHO BOT, aceptas las prácticas descritas en esta
+                Política de Privacidad.
+            </p>
+        </section>
 
-## 9. Derechos y solicitudes de eliminación
+        <section>
+            <h2>1. Responsable</h2>
 
-Dependiendo de la legislación aplicable, puedes tener derechos relacionados con tus datos personales, incluyendo:
+            <p>
+                FERSHO BOT es un bot independiente desarrollado para la plataforma Discord.
+            </p>
 
-* Solicitar información sobre los datos que procesamos.
-* Solicitar la corrección de información incorrecta.
-* Solicitar la eliminación de determinados datos.
-* Solicitar información sobre cómo se utilizan tus datos.
+            <div class="contact">
+                <strong>Correo electrónico:</strong> [ugzombie16@gmail.com]
+            </div>
+        </section>
 
-Para realizar una solicitud relacionada con privacidad, contacta mediante:
+        <section>
+            <h2>2. Información que podemos recopilar</h2>
 
-**Correo electrónico:** [ugzombie16@gmail.com]
+            <p>
+                FERSHO BOT puede procesar determinada información proporcionada
+                por Discord o generada mediante el uso de sus funciones.
+            </p>
 
-Las solicitudes podrán requerir información suficiente para verificar que la persona que realiza la solicitud está autorizada para hacerlo.
+            <p>Dependiendo de las funciones habilitadas en un servidor, esto puede incluir:</p>
 
-## 10. Datos de menores
+            <ul>
+                <li>ID de usuario de Discord.</li>
+                <li>ID del servidor de Discord.</li>
+                <li>ID de canales.</li>
+                <li>ID de roles.</li>
+                <li>Nombre de usuario, nombre para mostrar o apodo de Discord.</li>
+                <li>Información necesaria para ejecutar comandos solicitados por los usuarios.</li>
+                <li>Configuraciones del Bot establecidas por los administradores de un servidor.</li>
+                <li>Información relacionada con el uso de comandos y funciones del Bot.</li>
+            </ul>
 
-FERSHO BOT no está destinado específicamente a recopilar información de menores.
+            <p>
+                FERSHO BOT no necesita recopilar información como contraseñas,
+                información bancaria, números de tarjetas de crédito o mensajes
+                privados de Discord.
+            </p>
+        </section>
 
-No solicitamos deliberadamente información personal innecesaria de menores. Si consideras que se ha proporcionado información personal de un menor de forma indebida, puedes contactarnos para solicitar su revisión y eliminación cuando corresponda.
+        <section>
+            <h2>3. Cómo utilizamos la información</h2>
 
-## 11. Cambios en esta Política de Privacidad
+            <p>La información procesada por FERSHO BOT puede utilizarse para:</p>
 
-Podemos actualizar esta Política de Privacidad cuando sea necesario para reflejar cambios en FERSHO BOT, sus funciones, requisitos legales o prácticas de procesamiento de datos.
+            <ul>
+                <li>Ejecutar los comandos solicitados por los usuarios.</li>
+                <li>Proporcionar las funciones del Bot.</li>
+                <li>Guardar y aplicar configuraciones específicas de cada servidor.</li>
+                <li>Mantener y mejorar el funcionamiento del Bot.</li>
+                <li>Detectar errores, abusos o usos indebidos.</li>
+                <li>Mantener la seguridad y estabilidad del servicio.</li>
+                <li>Responder a solicitudes de soporte.</li>
+            </ul>
 
-Cuando se realicen cambios importantes, actualizaremos la fecha de "Última actualización" situada al principio de esta página.
+            <p>
+                La información no se utilizará para vender datos personales a terceros.
+            </p>
+        </section>
 
-El uso continuado de FERSHO BOT después de una actualización significa que la versión actual de esta Política de Privacidad será la aplicable al uso del Bot.
+        <section>
+            <h2>4. Mensajes y contenido de Discord</h2>
 
-## 12. Contacto
+            <p>
+                FERSHO BOT puede necesitar acceder a determinados mensajes o
+                contenido de Discord cuando una función o comando específico lo requiere.
+            </p>
 
-Si tienes preguntas, solicitudes o inquietudes relacionadas con esta Política de Privacidad, puedes contactar mediante:
+            <p>
+                El Bot no está diseñado para almacenar permanentemente conversaciones
+                privadas o mensajes personales de los usuarios salvo que una función
+                específica indique claramente lo contrario.
+            </p>
 
-**Correo electrónico:** [ugzombie16@gmail.com]
+            <p>
+                Cuando sea técnicamente necesario procesar contenido para ejecutar
+                una función, dicho contenido se utilizará únicamente para proporcionar
+                esa función.
+            </p>
+        </section>
 
----
+        <section>
+            <h2>5. Almacenamiento de datos</h2>
 
-**FERSHO BOT**
+            <p>
+                La cantidad y el tipo de información almacenada pueden variar
+                dependiendo de las funciones utilizadas por el servidor.
+            </p>
 
-Esta Política de Privacidad se aplica al funcionamiento y uso de FERSHO BOT dentro de Discord.
+            <p>
+                Cuando sea necesario almacenar información, procuraremos conservar
+                únicamente los datos necesarios para proporcionar las funciones correspondientes.
+            </p>
+
+            <p>Los datos podrán eliminarse cuando:</p>
+
+            <ul>
+                <li>Ya no sean necesarios para proporcionar el servicio.</li>
+                <li>El servidor deje de utilizar FERSHO BOT.</li>
+                <li>El usuario o administrador correspondiente solicite su eliminación, cuando corresponda.</li>
+                <li>Sea necesario eliminarlos por razones de seguridad o mantenimiento.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Compartición de información</h2>
+
+            <p>
+                FERSHO BOT no vende ni alquila información personal.
+            </p>
+
+            <p>
+                La información puede ser procesada por proveedores de infraestructura
+                o servicios tecnológicos utilizados para operar el Bot, únicamente
+                cuando sea necesario para proporcionar, mantener o proteger el servicio.
+            </p>
+
+            <p>
+                También podremos divulgar información cuando sea necesario para cumplir
+                con obligaciones legales, proteger nuestros derechos o prevenir actividades
+                fraudulentas, abusivas o ilegales.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Discord</h2>
+
+            <p>
+                FERSHO BOT funciona dentro de la plataforma Discord.
+            </p>
+
+            <p>
+                El uso de Discord está sujeto a los propios términos y políticas
+                de privacidad de Discord. FERSHO BOT no controla las prácticas de
+                privacidad, almacenamiento o procesamiento de datos realizadas directamente por Discord.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Seguridad</h2>
+
+            <p>
+                Tomamos medidas razonables para proteger la información procesada
+                por FERSHO BOT contra acceso no autorizado, pérdida, alteración o divulgación.
+            </p>
+
+            <p>
+                Sin embargo, ningún sistema conectado a Internet puede garantizar
+                una seguridad absoluta.
+            </p>
+        </section>
+
+        <section>
+            <h2>9. Derechos y solicitudes de eliminación</h2>
+
+            <p>
+                Dependiendo de la legislación aplicable, puedes tener derechos
+                relacionados con tus datos personales, incluyendo:
+            </p>
+
+            <ul>
+                <li>Solicitar información sobre los datos que procesamos.</li>
+                <li>Solicitar la corrección de información incorrecta.</li>
+                <li>Solicitar la eliminación de determinados datos.</li>
+                <li>Solicitar información sobre cómo se utilizan tus datos.</li>
+            </ul>
+
+            <div class="contact">
+                <strong>Correo electrónico:</strong> [ugzombie16@gmail.com]
+            </div>
+        </section>
+
+        <section>
+            <h2>10. Datos de menores</h2>
+
+            <p>
+                FERSHO BOT no está destinado específicamente a recopilar información de menores.
+            </p>
+
+            <p>
+                No solicitamos deliberadamente información personal innecesaria de menores.
+                Si consideras que se ha proporcionado información personal de un menor de
+                forma indebida, puedes contactarnos para solicitar su revisión y eliminación
+                cuando corresponda.
+            </p>
+        </section>
+
+        <section>
+            <h2>11. Cambios en esta Política de Privacidad</h2>
+
+            <p>
+                Podemos actualizar esta Política de Privacidad cuando sea necesario
+                para reflejar cambios en FERSHO BOT, sus funciones, requisitos legales
+                o prácticas de procesamiento de datos.
+            </p>
+
+            <p>
+                Cuando se realicen cambios importantes, actualizaremos la fecha de
+                "Última actualización" situada al principio de esta página.
+            </p>
+        </section>
+
+        <section>
+            <h2>12. Contacto</h2>
+
+            <p>
+                Si tienes preguntas, solicitudes o inquietudes relacionadas con esta
+                Política de Privacidad, puedes contactar mediante:
+            </p>
+
+            <div class="contact">
+                <strong>Correo electrónico:</strong> [ugzombie16@gmail.com]
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 FERSHO BOT. Todos los derechos reservados.</p>
+    <br>
+    <a href="/terms.html">Términos de Servicio</a>
+    <a href="/privacy.html">Política de Privacidad</a>
+</footer>
+
+</body>
+</html>
