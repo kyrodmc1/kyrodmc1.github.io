@@ -1,0 +1,546 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FERSHO BOT | Discord Bot</title>
+
+    <meta name="description" content="FERSHO BOT - Bot para servidores de Discord.">
+    <meta name="theme-color" content="#5865F2">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+
+            background:
+                radial-gradient(circle at 50% -20%, rgba(88, 101, 242, 0.20), transparent 45%),
+                #0b0d12;
+
+            color: #e7e9ee;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        header {
+            width: 100%;
+            border-bottom: 1px solid #252936;
+            background: rgba(16, 19, 26, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 24px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #5865f2;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #aeb4c2;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: auto;
+            padding: 120px 24px 100px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 14px;
+            margin-bottom: 24px;
+
+            border-radius: 999px;
+
+            background: rgba(88, 101, 242, 0.12);
+            border: 1px solid rgba(88, 101, 242, 0.25);
+
+            color: #9da6ff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 82px);
+            line-height: 1;
+            letter-spacing: -3px;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #5865f2;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #9da3b1;
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 38px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 23px;
+            border-radius: 9px;
+
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: #5865f2;
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.25);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            background: #6975f5;
+        }
+
+        .button-secondary {
+            background: #171a22;
+            border: 1px solid #292d38;
+            color: #d7dae2;
+        }
+
+        .button-secondary:hover {
+            transform: translateY(-2px);
+            border-color: #414653;
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 24px 100px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #858b99;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #11141b;
+            border: 1px solid #252936;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #353a48;
+        }
+
+        .card-icon {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+            background: rgba(88, 101, 242, 0.12);
+            color: #8d98ff;
+
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .card h3 {
+            color: #ffffff;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #9298a6;
+            font-size: 14px;
+        }
+
+        .legal {
+            max-width: 850px;
+            margin: auto;
+            padding: 0 24px 100px;
+        }
+
+        .legal-box {
+            background: #11141b;
+            border: 1px solid #252936;
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .legal-box h2 {
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .legal-box p {
+            color: #9298a6;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .legal-links a {
+            color: #9da6ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .legal-links a:hover {
+            color: #ffffff;
+        }
+
+        footer {
+            border-top: 1px solid #252936;
+            background: #10131a;
+            padding: 35px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #6f7684;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #858b99;
+            text-decoration: none;
+            font-size: 13px;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 700px) {
+
+            .header-content {
+                padding: 17px 18px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 90px 20px 80px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding-bottom: 70px;
+            }
+
+            .legal {
+                padding-bottom: 70px;
+            }
+
+            .legal-box {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+
+        <a href="/" class="logo">
+            FERSHO <span>BOT</span>
+        </a>
+
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/terms.html">Términos</a>
+            <a href="/privacy.html">Privacidad</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <div class="badge">
+            Discord Bot
+        </div>
+
+        <h1>
+            FERSHO <span>BOT</span>
+        </h1>
+
+        <p>
+            Un bot para Discord diseñado para ofrecer funciones útiles,
+            automatización y herramientas para comunidades.
+        </p>
+
+        <div class="buttons">
+
+            <!-- Si luego tienes una URL de invitación del bot,
+                 reemplaza # por ella -->
+
+            <a href="#" class="button button-primary">
+                Añadir a Discord
+            </a>
+
+            <a href="/privacy.html" class="button button-secondary">
+                Política de Privacidad
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>FERSHO BOT</h2>
+
+            <p>
+                Herramientas para mejorar la experiencia de tu servidor.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Rápido y sencillo
+                </h3>
+
+                <p>
+                    Diseñado para ofrecer una experiencia sencilla,
+                    rápida y fácil de utilizar dentro de Discord.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Configurable
+                </h3>
+
+                <p>
+                    Los administradores pueden configurar las funciones
+                    disponibles según las necesidades de su servidor.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛡
+                </div>
+
+                <h3>
+                    Enfoque en privacidad
+                </h3>
+
+                <p>
+                    FERSHO BOT busca procesar únicamente la información
+                    necesaria para proporcionar sus funciones.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    Discord
+                </div>
+
+                <h3>
+                    Integrado con Discord
+                </h3>
+
+                <p>
+                    FERSHO BOT funciona directamente dentro de la plataforma
+                    Discord y sus servidores.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="legal">
+
+        <div class="legal-box">
+
+            <h2>
+                Información legal
+            </h2>
+
+            <p>
+                Consulta nuestros documentos legales para conocer las
+                condiciones de uso de FERSHO BOT y cómo se procesa la información.
+            </p>
+
+            <div class="legal-links">
+
+                <a href="/terms.html">
+                    Términos de Servicio
+                </a>
+
+                <a href="/privacy.html">
+                    Política de Privacidad
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 FERSHO BOT. Todos los derechos reservados.
+    </p>
+
+    <a href="/terms.html">
+        Términos de Servicio
+    </a>
+
+    <a href="/privacy.html">
+        Política de Privacidad
+    </a>
+
+</footer>
+
+</body>
+</html>
+```
